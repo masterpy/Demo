@@ -13,6 +13,8 @@
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
 #import "JDAddCasusTableViewController.h"
+#import <TMCache.h>
+#import "JDTMCacheKeyConstan.h"
 
 #define kPageCount 10
 
@@ -20,20 +22,10 @@
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) NSDate *lastDate; /**< 最后一条数据的时间*/
 @property (nonatomic, assign) NSInteger page;
-@property (nonatomic, assign) BOOL haveFirstLoad;
 
 @end
 
 @implementation JDNewestTableViewController
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    if (!self.haveFirstLoad) {
-        self.haveFirstLoad = YES;
-        [self.tableView.header beginRefreshing];
-    }
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +33,18 @@
     self.page = 1;
     self.navigationController.view.backgroundColor = [UIColor whiteColor];
     [self configureTableView];
+    
+    __weak typeof(self) weakSelf = self;
+    //先获取本地缓存的数据，然后再刷新取一次最新的
+    [[TMCache sharedCache] objectForKey:kTMCacheKey_NewestObjects block:^(TMCache *cache, NSString *key, id object) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (object && [object isKindOfClass:[NSArray class]]) {
+                [weakSelf addDataSourceWithNewestObjects:object filishBlock:nil];
+            }
+            [weakSelf.tableView.header beginRefreshing];
+        });
+    }];
+
 }
 
 #pragma mark - Table view data source
@@ -120,6 +124,9 @@
                 //是刷新
                 weakSelf.lastDate = nil;
                 [weakSelf.dataSource removeAllObjects];
+                
+                //缓存数据到本地
+                [[TMCache sharedCache] setObject:objects forKey:kTMCacheKey_NewestObjects];
             }
             
             [weakSelf addDataSourceWithNewestObjects:objects filishBlock:^{

@@ -23,6 +23,7 @@
 		02621EBD1BD86B7A0025A998 /* JDAddCasusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EBC1BD86B7A0025A998 /* JDAddCasusTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		02621EEC1BD8DADA0025A998 /* TQStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EE71BD8DADA0025A998 /* TQStarRatingView.m */; settings = {ASSET_TAGS = (); }; };
 		02621EEF1BD8E15A0025A998 /* JDSelectLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EEE1BD8E15A0025A998 /* JDSelectLabelButton.m */; settings = {ASSET_TAGS = (); }; };
+		02621EFB1BD8E7C90025A998 /* JDTMCacheKeyConstan.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EFA1BD8E7C90025A998 /* JDTMCacheKeyConstan.m */; settings = {ASSET_TAGS = (); }; };
 		BBC4B61FC9C6CB95F1496A26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D3EBC84C61F55ACA3C34A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		02621EE71BD8DADA0025A998 /* TQStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQStarRatingView.m; sourceTree = "<group>"; };
 		02621EED1BD8E15A0025A998 /* JDSelectLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDSelectLabelButton.h; sourceTree = "<group>"; };
 		02621EEE1BD8E15A0025A998 /* JDSelectLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSelectLabelButton.m; sourceTree = "<group>"; };
+		02621EF91BD8E7C90025A998 /* JDTMCacheKeyConstan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTMCacheKeyConstan.h; sourceTree = "<group>"; };
+		02621EFA1BD8E7C90025A998 /* JDTMCacheKeyConstan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTMCacheKeyConstan.m; sourceTree = "<group>"; };
 		5686839B7C83036DA77B8A39 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5BD2EB73156C66708E95C133 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D03D3EBC84C61F55ACA3C34A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +189,7 @@
 		025DB6DE1BD27952006D8671 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				02621EF41BD8E7600025A998 /* Macro */,
 				02621EDF1BD8DAA60025A998 /* Vendors */,
 				021CCD851BD62EE4005A6658 /* Helper */,
 				021CCD6E1BD52648005A6658 /* Newest */,
@@ -251,6 +255,15 @@
 			children = (
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		02621EF41BD8E7600025A998 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				02621EF91BD8E7C90025A998 /* JDTMCacheKeyConstan.h */,
+				02621EFA1BD8E7C90025A998 /* JDTMCacheKeyConstan.m */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		6009F9CDAD47A13456EE5BAA /* Pods */ = {
@@ -453,6 +466,7 @@
 			files = (
 				021CCD881BD62F00005A6658 /* JDDateFormatter.m in Sources */,
 				021CCD801BD61002005A6658 /* JDNewestObject.m in Sources */,
+				02621EFB1BD8E7C90025A998 /* JDTMCacheKeyConstan.m in Sources */,
 				025DB6E41BD27952006D8671 /* AppDelegate.m in Sources */,
 				021CCD611BD4E342005A6658 /* JDTabBarViewController.m in Sources */,
 				025DB6E11BD27952006D8671 /* main.m in Sources */,
