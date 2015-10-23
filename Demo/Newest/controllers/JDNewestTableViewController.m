@@ -39,7 +39,13 @@
     [[TMCache sharedCache] objectForKey:kTMCacheKey_NewestObjects block:^(TMCache *cache, NSString *key, id object) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (object && [object isKindOfClass:[NSArray class]]) {
-                [weakSelf addDataSourceWithNewestObjects:object filishBlock:nil];
+                NSMutableArray *objectArray = [NSMutableArray arrayWithCapacity:0];
+                for (NSInteger i = 0; i < [object count]; i++) {
+                    NSArray *array = (NSArray *)object;
+                    JDNewestObject *object = (JDNewestObject *)[JDNewestObject objectWithDictionary:array[i]];
+                    [objectArray addObject:object];
+                }
+                [weakSelf addDataSourceWithNewestObjects:objectArray filishBlock:nil];
             }
             [weakSelf.tableView.header beginRefreshing];
         });
@@ -126,7 +132,13 @@
                 [weakSelf.dataSource removeAllObjects];
                 
                 //缓存数据到本地
-                [[TMCache sharedCache] setObject:objects forKey:kTMCacheKey_NewestObjects];
+                NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
+                for (NSInteger i = 0; i < objects.count; i++) {
+                    JDNewestObject *object = objects[i];
+                    NSDictionary *dic = [object dictionaryForObject];
+                    [array addObject:dic];
+                }
+                [[TMCache sharedCache] setObject:array forKey:kTMCacheKey_NewestObjects];
             }
             
             [weakSelf addDataSourceWithNewestObjects:objects filishBlock:^{
