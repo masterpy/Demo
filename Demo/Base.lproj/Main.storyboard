@@ -629,7 +629,7 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="RJ2-p0-uac" kind="relationship" relationship="rootViewController" id="POl-pR-1x9"/>
+                        <segue destination="1RX-1b-jsz" kind="relationship" relationship="rootViewController" id="CDl-R0-FGc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWk-lx-ag0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -674,10 +674,10 @@
             </objects>
             <point key="canvasLocation" x="1919" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Euq-j3-nHu">
             <objects>
-                <viewController id="RJ2-p0-uac" sceneMemberID="viewController">
+                <viewController id="RJ2-p0-uac" customClass="JDLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tkK-lq-Yd6"/>
                         <viewControllerLayoutGuide type="bottom" id="j5R-GS-6tg"/>
@@ -686,25 +686,137 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtN-Go-boc">
-                                <rect key="frame" x="231" y="240" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-tK-ZzV">
+                                <rect key="frame" x="0.0" y="20" width="35" height="35"/>
                                 <animations/>
-                                <state key="normal" title="微信账号登录"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="lAu-a3-UOf"/>
+                                    <constraint firstAttribute="height" constant="35" id="rJ3-Gf-YcD"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="RJ2-p0-uac" eventType="touchUpInside" id="xNO-l5-cG0"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0c-qt-HNO">
-                                <rect key="frame" x="220" y="328" width="83" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每周精选H5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-67-Yb1">
+                                <rect key="frame" x="241" y="195" width="118.5" height="26.5"/>
                                 <animations/>
-                                <state key="normal" title="QQ账号登录"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="业界HTML5案例创意、技巧触手可及" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maV-7l-wbw">
+                                <rect key="frame" x="193" y="272" width="213.5" height="16"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtN-Go-boc">
+                                <rect key="frame" x="50" y="420" width="500" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="微信账号登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wechatLogin:" destination="RJ2-p0-uac" eventType="touchUpInside" id="bob-ED-SrR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0c-qt-HNO">
+                                <rect key="frame" x="50" y="480" width="500" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cdT-mH-Aad"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="QQ账号登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qqLogin:" destination="RJ2-p0-uac" eventType="touchUpInside" id="mml-RO-THx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="maV-7l-wbw" firstAttribute="centerY" secondItem="W24-eL-UDT" secondAttribute="centerY" constant="-20" id="5ea-kw-4L7"/>
+                            <constraint firstItem="cCN-tK-ZzV" firstAttribute="top" secondItem="tkK-lq-Yd6" secondAttribute="bottom" id="9cb-QQ-rpT"/>
+                            <constraint firstItem="maV-7l-wbw" firstAttribute="centerX" secondItem="W24-eL-UDT" secondAttribute="centerX" id="J07-wI-DK1"/>
+                            <constraint firstItem="N0c-qt-HNO" firstAttribute="leading" secondItem="W24-eL-UDT" secondAttribute="leadingMargin" constant="30" id="Mnv-Wj-FoZ"/>
+                            <constraint firstItem="VtN-Go-boc" firstAttribute="height" secondItem="N0c-qt-HNO" secondAttribute="height" id="bma-K6-s4h"/>
+                            <constraint firstItem="VtN-Go-boc" firstAttribute="width" secondItem="N0c-qt-HNO" secondAttribute="width" id="eaU-ss-oii"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N0c-qt-HNO" secondAttribute="trailing" constant="30" id="el2-qQ-mWE"/>
+                            <constraint firstItem="VtN-Go-boc" firstAttribute="centerX" secondItem="W24-eL-UDT" secondAttribute="centerX" id="rXZ-Uo-2cB"/>
+                            <constraint firstItem="maV-7l-wbw" firstAttribute="top" secondItem="M0p-67-Yb1" secondAttribute="bottom" constant="50" id="uFF-k0-3el"/>
+                            <constraint firstItem="M0p-67-Yb1" firstAttribute="centerX" secondItem="W24-eL-UDT" secondAttribute="centerX" id="vGG-Ug-vrh"/>
+                            <constraint firstItem="j5R-GS-6tg" firstAttribute="top" secondItem="N0c-qt-HNO" secondAttribute="bottom" constant="80" id="wwP-qB-XvP"/>
+                            <constraint firstItem="cCN-tK-ZzV" firstAttribute="leading" secondItem="W24-eL-UDT" secondAttribute="leading" id="xno-zQ-AI7"/>
+                            <constraint firstItem="N0c-qt-HNO" firstAttribute="top" secondItem="VtN-Go-boc" secondAttribute="bottom" constant="20" id="yJ8-7P-ode"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qqLoginButton" destination="N0c-qt-HNO" id="M6g-jc-Mzm"/>
+                        <outlet property="wechatLoginButton" destination="VtN-Go-boc" id="GgN-hb-uTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zub-Ae-xuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-493" y="339"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="YL2-dX-F5R">
+            <objects>
+                <viewController id="1RX-1b-jsz" customClass="JDUserCenterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="azT-3a-lwH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q5F-To-F4j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ui8-NV-Z2x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVm-AN-P4h">
+                                <rect key="frame" x="279" y="290" width="42" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWU-is-11Y">
+                                <rect key="frame" x="100" y="441" width="400" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="退出登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonClicked:" destination="1RX-1b-jsz" eventType="touchUpInside" id="ZhH-Uf-t0R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oVm-AN-P4h" firstAttribute="centerX" secondItem="Ui8-NV-Z2x" secondAttribute="centerX" id="1kf-e8-qut"/>
+                            <constraint firstItem="oVm-AN-P4h" firstAttribute="centerY" secondItem="Ui8-NV-Z2x" secondAttribute="centerY" id="9UE-en-42y"/>
+                            <constraint firstItem="Q5F-To-F4j" firstAttribute="top" secondItem="PWU-is-11Y" secondAttribute="bottom" constant="80" id="JZw-cQ-uVJ"/>
+                            <constraint firstItem="PWU-is-11Y" firstAttribute="leading" secondItem="Ui8-NV-Z2x" secondAttribute="leading" constant="100" id="fsY-Cw-JXi"/>
+                            <constraint firstItem="PWU-is-11Y" firstAttribute="centerX" secondItem="Ui8-NV-Z2x" secondAttribute="centerX" id="v0t-wN-jd2"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PjX-Eh-7YC"/>
+                    <navigationItem key="navigationItem" title="个人中心" id="pLc-Je-a2d"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="oVm-AN-P4h" id="PNA-34-MTR"/>
+                        <outlet property="logoutButton" destination="PWU-is-11Y" id="2je-G3-zqt"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zub-Ae-xuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gla-Wk-esM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906" y="1868"/>
+            <point key="canvasLocation" x="1919" y="1867"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="FUv-7m-mk9">
@@ -720,6 +832,7 @@
                         <segue destination="CCT-6F-vZd" kind="relationship" relationship="viewControllers" id="Ns0-XU-jYq"/>
                         <segue destination="KcG-gb-jdY" kind="relationship" relationship="viewControllers" id="kxZ-ve-Vt7"/>
                         <segue destination="ona-nn-log" kind="relationship" relationship="viewControllers" id="xsX-ez-m0G"/>
+                        <segue destination="RJ2-p0-uac" kind="presentation" identifier="TabBarCtlPresentloginCtl" id="yev-Uk-Tly"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdB-nk-aZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -727,4 +840,7 @@
             <point key="canvasLocation" x="-493" y="1130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close" width="18" height="18"/>
+    </resources>
 </document>

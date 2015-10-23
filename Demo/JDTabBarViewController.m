@@ -7,8 +7,13 @@
 //
 
 #import "JDTabBarViewController.h"
+#import "JDLoginViewController.h"
+#import "JDNewestTableViewController.h"
+#import <MJRefresh.h>
+#import <AVOSCloudSNS.h>
+#import "JDNotificationKeyConstan.h"
 
-@interface JDTabBarViewController ()
+@interface JDTabBarViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -16,8 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessNotification:) name:kNotificationKey_LoginSuccess object:nil];
+
     [self applyTheme];
+    self.delegate = self;
+}
+
+#pragma mark - Notification
+
+- (void)loginSuccessNotification:(NSNotification *)notification {
+    self.selectedIndex = 2;
 }
 
 #pragma mark - Private Method
@@ -48,4 +61,31 @@
     [item setSelectedImage: selectedImage];
 }
 
+#pragma mark - UITabBarControllerDelegate
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    UINavigationController *navCtl = (UINavigationController *)viewController;
+
+    if (tabBarController.selectedViewController == viewController) {
+        if ([navCtl.viewControllers[0] isKindOfClass:[JDNewestTableViewController class]]) {
+            //刷新
+            JDNewestTableViewController *newestCtl = (JDNewestTableViewController *)navCtl.viewControllers[0];
+            [newestCtl.tableView.header beginRefreshing];
+        }
+        return NO;
+    }
+    
+    if ([tabBarController.viewControllers indexOfObject:viewController] == 2) {
+        if (![AVOSCloudSNS userInfo:AVOSCloudSNSQQ] && ![AVOSCloudSNS userInfo:AVOSCloudSNSWeiXin]) {
+            //如果QQ和微信都没有登录就跳到登录页面
+            [self performSegueWithIdentifier:@"TabBarCtlPresentloginCtl" sender:nil];
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+}
 @end

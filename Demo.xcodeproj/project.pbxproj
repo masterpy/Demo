@@ -13,6 +13,8 @@
 		021CCD801BD61002005A6658 /* JDNewestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 021CCD7F1BD61002005A6658 /* JDNewestObject.m */; settings = {ASSET_TAGS = (); }; };
 		021CCD881BD62F00005A6658 /* JDDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 021CCD871BD62F00005A6658 /* JDDateFormatter.m */; settings = {ASSET_TAGS = (); }; };
 		021CCD8F1BD645F4005A6658 /* JDNewestPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 021CCD8E1BD645F4005A6658 /* JDNewestPhotoView.m */; settings = {ASSET_TAGS = (); }; };
+		0222A2171BD92C9300950165 /* JDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0222A2161BD92C9300950165 /* JDLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0222A2261BD9DCC500950165 /* JDNotificationKeyConstan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0222A2251BD9DCC500950165 /* JDNotificationKeyConstan.m */; settings = {ASSET_TAGS = (); }; };
 		025DB6E11BD27952006D8671 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6E01BD27952006D8671 /* main.m */; };
 		025DB6E41BD27952006D8671 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6E31BD27952006D8671 /* AppDelegate.m */; };
 		025DB6EA1BD27952006D8671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025DB6E81BD27952006D8671 /* Main.storyboard */; };
@@ -20,6 +22,7 @@
 		025DB6EF1BD27952006D8671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025DB6ED1BD27952006D8671 /* LaunchScreen.storyboard */; };
 		025DB6FA1BD27953006D8671 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB6F91BD27953006D8671 /* DemoTests.m */; };
 		025DB7051BD27953006D8671 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DB7041BD27953006D8671 /* DemoUITests.m */; };
+		0261FD291BD9E211007D5F14 /* JDUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0261FD281BD9E211007D5F14 /* JDUserCenterViewController.m */; settings = {ASSET_TAGS = (); }; };
 		02621EBD1BD86B7A0025A998 /* JDAddCasusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EBC1BD86B7A0025A998 /* JDAddCasusTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		02621EEC1BD8DADA0025A998 /* TQStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EE71BD8DADA0025A998 /* TQStarRatingView.m */; settings = {ASSET_TAGS = (); }; };
 		02621EEF1BD8E15A0025A998 /* JDSelectLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02621EEE1BD8E15A0025A998 /* JDSelectLabelButton.m */; settings = {ASSET_TAGS = (); }; };
@@ -57,6 +60,10 @@
 		021CCD871BD62F00005A6658 /* JDDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDDateFormatter.m; sourceTree = "<group>"; };
 		021CCD8D1BD645F4005A6658 /* JDNewestPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNewestPhotoView.h; sourceTree = "<group>"; };
 		021CCD8E1BD645F4005A6658 /* JDNewestPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNewestPhotoView.m; sourceTree = "<group>"; };
+		0222A2151BD92C9300950165 /* JDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDLoginViewController.h; sourceTree = "<group>"; };
+		0222A2161BD92C9300950165 /* JDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDLoginViewController.m; sourceTree = "<group>"; };
+		0222A2241BD9DCC500950165 /* JDNotificationKeyConstan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNotificationKeyConstan.h; sourceTree = "<group>"; };
+		0222A2251BD9DCC500950165 /* JDNotificationKeyConstan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNotificationKeyConstan.m; sourceTree = "<group>"; };
 		025DB6DC1BD27952006D8671 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025DB6E01BD27952006D8671 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		025DB6E21BD27952006D8671 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +78,8 @@
 		025DB7001BD27953006D8671 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025DB7041BD27953006D8671 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		025DB7061BD27953006D8671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0261FD271BD9E211007D5F14 /* JDUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDUserCenterViewController.h; sourceTree = "<group>"; };
+		0261FD281BD9E211007D5F14 /* JDUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDUserCenterViewController.m; sourceTree = "<group>"; };
 		02621EBB1BD86B7A0025A998 /* JDAddCasusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddCasusTableViewController.h; sourceTree = "<group>"; };
 		02621EBC1BD86B7A0025A998 /* JDAddCasusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddCasusTableViewController.m; sourceTree = "<group>"; };
 		02621EE61BD8DADA0025A998 /* TQStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQStarRatingView.h; sourceTree = "<group>"; };
@@ -164,6 +173,15 @@
 			path = helper;
 			sourceTree = "<group>";
 		};
+		0222A2141BD92C7200950165 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0222A2151BD92C9300950165 /* JDLoginViewController.h */,
+				0222A2161BD92C9300950165 /* JDLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		025DB6D31BD27952006D8671 = {
 			isa = PBXGroup;
 			children = (
@@ -189,19 +207,22 @@
 		025DB6DE1BD27952006D8671 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				025DB6E21BD27952006D8671 /* AppDelegate.h */,
+				025DB6E31BD27952006D8671 /* AppDelegate.m */,
+				021CCD5F1BD4E342005A6658 /* JDTabBarViewController.h */,
+				021CCD601BD4E342005A6658 /* JDTabBarViewController.m */,
+				0222A2141BD92C7200950165 /* Login */,
+				021CCD6E1BD52648005A6658 /* Newest */,
+				0261FD251BD9E1AC007D5F14 /* AllCasus */,
+				0261FD261BD9E1AC007D5F14 /* UserCenter */,
 				02621EF41BD8E7600025A998 /* Macro */,
 				02621EDF1BD8DAA60025A998 /* Vendors */,
 				021CCD851BD62EE4005A6658 /* Helper */,
-				021CCD6E1BD52648005A6658 /* Newest */,
-				025DB6E21BD27952006D8671 /* AppDelegate.h */,
-				025DB6E31BD27952006D8671 /* AppDelegate.m */,
 				025DB6E81BD27952006D8671 /* Main.storyboard */,
 				025DB6EB1BD27952006D8671 /* Assets.xcassets */,
 				025DB6ED1BD27952006D8671 /* LaunchScreen.storyboard */,
 				025DB6F01BD27952006D8671 /* Info.plist */,
 				025DB6DF1BD27952006D8671 /* Supporting Files */,
-				021CCD5F1BD4E342005A6658 /* JDTabBarViewController.h */,
-				021CCD601BD4E342005A6658 /* JDTabBarViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -230,6 +251,22 @@
 				025DB7061BD27953006D8671 /* Info.plist */,
 			);
 			path = DemoUITests;
+			sourceTree = "<group>";
+		};
+		0261FD251BD9E1AC007D5F14 /* AllCasus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AllCasus;
+			sourceTree = "<group>";
+		};
+		0261FD261BD9E1AC007D5F14 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				0261FD271BD9E211007D5F14 /* JDUserCenterViewController.h */,
+				0261FD281BD9E211007D5F14 /* JDUserCenterViewController.m */,
+			);
+			path = UserCenter;
 			sourceTree = "<group>";
 		};
 		02621EDF1BD8DAA60025A998 /* Vendors */ = {
@@ -262,6 +299,8 @@
 			children = (
 				02621EF91BD8E7C90025A998 /* JDTMCacheKeyConstan.h */,
 				02621EFA1BD8E7C90025A998 /* JDTMCacheKeyConstan.m */,
+				0222A2241BD9DCC500950165 /* JDNotificationKeyConstan.h */,
+				0222A2251BD9DCC500950165 /* JDNotificationKeyConstan.m */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -465,13 +504,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				021CCD881BD62F00005A6658 /* JDDateFormatter.m in Sources */,
+				0222A2261BD9DCC500950165 /* JDNotificationKeyConstan.m in Sources */,
 				021CCD801BD61002005A6658 /* JDNewestObject.m in Sources */,
 				02621EFB1BD8E7C90025A998 /* JDTMCacheKeyConstan.m in Sources */,
 				025DB6E41BD27952006D8671 /* AppDelegate.m in Sources */,
 				021CCD611BD4E342005A6658 /* JDTabBarViewController.m in Sources */,
 				025DB6E11BD27952006D8671 /* main.m in Sources */,
 				021CCD7A1BD60DB0005A6658 /* JDNewestTableViewController.m in Sources */,
+				0261FD291BD9E211007D5F14 /* JDUserCenterViewController.m in Sources */,
 				02621EEC1BD8DADA0025A998 /* TQStarRatingView.m in Sources */,
+				0222A2171BD92C9300950165 /* JDLoginViewController.m in Sources */,
 				02621EBD1BD86B7A0025A998 /* JDAddCasusTableViewController.m in Sources */,
 				021CCD7D1BD60DD5005A6658 /* JDNewestTableViewCell.m in Sources */,
 				021CCD8F1BD645F4005A6658 /* JDNewestPhotoView.m in Sources */,

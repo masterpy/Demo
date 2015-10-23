@@ -11,8 +11,14 @@
 #import <LeanCloudSocial/AVOSCloudSNS.h>
 #import "JDNewestObject.h"
 
-#define AVOSCloudAppID  @"i5VaSBHNe4VRt2BOD0K1QfTm"
-#define AVOSCloudAppKey @"7FEb0I8jheW5W6lL1poOwFfj"
+#define kAVOSCloudAppID  @"i5VaSBHNe4VRt2BOD0K1QfTm"
+#define kAVOSCloudAppKey @"7FEb0I8jheW5W6lL1poOwFfj"
+
+#define kQQAppID  @"100512940"
+#define kQQAppKey @"afbfdff94b95a2fb8fe58a8e24c4ba5f"
+
+#define kWechatAppID  @"wxa3eacc1c86a717bc"
+#define kWechatppKey @"b5bf245970b2a451fb8cebf8a6dff0c1"
 
 @interface AppDelegate ()
 
@@ -24,10 +30,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [JDNewestObject registerSubclass];
-    [AVOSCloud setApplicationId:AVOSCloudAppID
-                      clientKey:AVOSCloudAppKey];
+    [AVOSCloud setApplicationId:kAVOSCloudAppID
+                      clientKey:kAVOSCloudAppKey];
+    //注册登录key
+    [AVOSCloudSNS setupPlatform:AVOSCloudSNSQQ withAppKey:kQQAppID andAppSecret:kQQAppKey andRedirectURI:nil];
+    [AVOSCloudSNS setupPlatform:AVOSCloudSNSWeiXin withAppKey:kWechatAppID andAppSecret:kWechatppKey andRedirectURI:nil];
     [AVOSCloud setAllLogsEnabled:YES];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [AVOSCloudSNS handleOpenURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
